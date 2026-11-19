@@ -143,6 +143,17 @@ export interface WeddingData {
     title: string;
     list: string[];
   };
+
+  sisters: {
+    title: string;
+    list: string[];
+  };
+
+  cousins: {
+    title: string;
+    subtitle: string;
+    list: string[];
+  };
   
   compliments: {
     title: string;
@@ -385,6 +396,7 @@ export const WEDDING_DATA: WeddingData = {
       "Sri Devara Subbarayudu",
       "Sri Devara Chandra Shekar",
       "Sri Kathi Yerkulaiah",
+      "Sri Kadapa Babu",
     ],
   },
 
@@ -393,6 +405,25 @@ export const WEDDING_DATA: WeddingData = {
     list: [
       "Sri Arun Kumar",
       "Sri Lakshman",
+      "Sri Raju (Agafee)",
+    ],
+  },
+
+  sisters: {
+    title: "SISTERS",
+    list: [
+      "Chi. Sou. Jareesha",
+      "Chi. Sou. Kadapa Parvathi",
+    ],
+  },
+
+  cousins: {
+    title: "COUSINS & NEAR AND DEAR",
+    subtitle: "With the loving affection of our cousins, near and dear",
+    list: [
+      "Sri Hari",
+      "Sri Harsha",
+      "Sri Uday",
     ],
   },
 

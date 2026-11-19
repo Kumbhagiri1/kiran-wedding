@@ -84,7 +84,14 @@ async function testWebsite() {
     "GANGALLA MAHESWARI",
     "Kalyanam Vaibhogam",
     "og-couple.jpg",
-    "tempered-skyblue-squid-71.hostingersite.com"
+    "tempered-skyblue-squid-71.hostingersite.com",
+    "Sri Kadapa Babu",
+    "Sri Raju (Agafee)",
+    "Chi. Sou. Jareesha",
+    "Chi. Sou. Kadapa Parvathi",
+    "Sri Hari",
+    "Sri Harsha",
+    "Sri Uday"
   ];
 
   if (pageContent.includes("MAHESHWARI") || pageContent.includes("Maheshwari")) {

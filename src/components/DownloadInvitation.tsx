@@ -7,7 +7,7 @@ import { GaneshaEmblem, KalashIcon, GoldDivider, CornerFlourish } from "./Orname
 
 export function DownloadInvitation() {
   const [showPreview, setShowPreview] = useState(false);
-  const { groom, bride, muhurtham, venue, elders, compliments, closing } = WEDDING_DATA;
+  const { groom, bride, muhurtham, venue, elders, brothers, sisters, cousins, compliments, closing } = WEDDING_DATA;
 
   const handlePrint = () => {
     window.print();
@@ -149,13 +149,27 @@ export function DownloadInvitation() {
               </div>
 
               {/* Family & Elders */}
-              <div className="my-4 text-xs font-body text-darkText/80">
-                <p className="font-ceremonial font-bold text-maroon uppercase tracking-wider mb-1">
-                  {elders.title}
-                </p>
-                <p className="leading-relaxed">
-                  {elders.list.join(" • ")}
-                </p>
+              <div className="my-4 text-xs font-body text-darkText/80 space-y-2">
+                <div>
+                  <p className="font-ceremonial font-bold text-maroon uppercase tracking-wider mb-0.5">
+                    {elders.title}
+                  </p>
+                  <p className="leading-relaxed">
+                    {elders.list.join(" • ")}
+                  </p>
+                </div>
+
+                <div className="pt-1 border-t border-gold-antique/20">
+                  <span className="font-ceremonial font-bold text-maroon uppercase tracking-wider text-[11px] block">
+                    Brothers: <span className="font-body font-normal text-darkText/90">{brothers.list.join(" • ")}</span>
+                  </span>
+                  <span className="font-ceremonial font-bold text-maroon uppercase tracking-wider text-[11px] block mt-0.5">
+                    Sisters: <span className="font-body font-normal text-darkText/90">{sisters.list.join(" • ")}</span>
+                  </span>
+                  <span className="font-ceremonial font-bold text-maroon uppercase tracking-wider text-[11px] block mt-0.5">
+                    Cousins (Near & Dear): <span className="font-body font-normal text-darkText/90">{cousins.list.join(" • ")}</span>
+                  </span>
+                </div>
               </div>
 
               <div className="my-3 text-xs font-body">
