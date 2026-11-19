@@ -230,6 +230,7 @@ export const WEDDING_DATA: WeddingData = {
       "॥ Sri Venkateshwaraya Namah ॥",
       "॥ Sri Lakshmi Narayanabhyam Namah ॥",
       "॥ Sri Uma Maheshwarabhyam Namah ॥",
+      "॥ Sri Dakshina Murthy Namah ॥",
       "॥ Sri Sitaramachandrabhyam Namah ॥",
     ],
     traditionalBlessings: [

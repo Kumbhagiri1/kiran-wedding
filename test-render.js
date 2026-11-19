@@ -57,11 +57,24 @@ async function testWebsite() {
     console.log('Captured 06-guest-accommodation.png');
   }
 
+  // 5c. Capture dedicated footer with Royal Procession & Dhol theme
+  const footerEl = await page.$('footer');
+  if (footerEl) {
+    await footerEl.screenshot({ path: path.join(outDir, '07-royal-procession-footer.png') });
+    console.log('Captured 07-royal-procession-footer.png');
+  }
+
   // 6. Test Mobile Viewport (iPhone 14 - 390x844)
   await page.setViewport({ width: 390, height: 844, isMobile: true });
   await new Promise(r => setTimeout(r, 600));
   await page.screenshot({ path: path.join(outDir, '04-mobile-full.png'), fullPage: true });
   console.log('Captured 04-mobile-full.png');
+
+  const mobileFooterEl = await page.$('footer');
+  if (mobileFooterEl) {
+    await mobileFooterEl.screenshot({ path: path.join(outDir, '08-mobile-footer.png') });
+    console.log('Captured 08-mobile-footer.png');
+  }
 
   // 7. Verify elements presence
   const pageContent = await page.content();
@@ -96,7 +109,13 @@ async function testWebsite() {
     "Sri Devara Vishnu Vardhan Rao",
     "Sri Devara Kalyan",
     "Sri Devara Vijay Rama Rao",
-    "Sri Devara Subbarayudu"
+    "Sri Devara Subbarayudu",
+    "Sri Dakshina Murthy Namah",
+    "Royal Wedding Procession",
+    "Play Wedding Dhol Beats",
+    "Dhol Bass (Dhum)",
+    "High Slap (Takk)",
+    "Tutari Fanfare"
   ];
 
   const subbaIdx = pageContent.indexOf("Sri Devara Subbarayudu");
@@ -105,6 +124,13 @@ async function testWebsite() {
     throw new Error(`Order verification failed! Subbarayudu index: ${subbaIdx}, Venkateshwarlu index: ${venkatIdx}`);
   }
   console.log('Order verification: Sri Devara Subbarayudu appears BEFORE Sri Kumbhagiri Venkateshwarlu (PASS)');
+
+  const umaIdx = pageContent.indexOf("Sri Uma Maheshwarabhyam Namah");
+  const dakshinaIdx = pageContent.indexOf("Sri Dakshina Murthy Namah");
+  if (umaIdx === -1 || dakshinaIdx === -1 || umaIdx > dakshinaIdx) {
+    throw new Error(`Order verification failed! Uma index: ${umaIdx}, Dakshina index: ${dakshinaIdx}`);
+  }
+  console.log('Order verification: Sri Dakshina Murthy Namah appears AFTER Sri Uma Maheshwarabhyam Namah (PASS)');
 
   if (pageContent.includes("MAHESHWARI") || pageContent.includes("Maheshwari")) {
     throw new Error("Found old spelling Maheshwari in page content!");

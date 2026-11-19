@@ -31,7 +31,7 @@ export function DevotionalInvocation() {
 
         <GoldDivider className="my-4" symbol="om" />
 
-        {/* Five Sacred Invocations */}
+        {/* Six Sacred Invocations */}
         <div className="space-y-3 sm:space-y-4 my-6">
           {WEDDING_DATA.invocations.deityMantras.map((mantra, index) => (
             <div
