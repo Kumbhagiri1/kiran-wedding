@@ -15,7 +15,11 @@ export function ShareModal({ isOpen, onClose }: ShareModalProps) {
 
   if (!isOpen) return null;
 
-  const currentUrl = typeof window !== "undefined" ? window.location.href : "https://kumbhagiriwedding.com";
+  const LIVE_URL = "https://tempered-skyblue-squid-71.hostingersite.com/";
+  const currentUrl =
+    typeof window !== "undefined" && !window.location.hostname.includes("localhost") && !window.location.hostname.includes("127.0.0.1")
+      ? window.location.href
+      : LIVE_URL;
 
   const haldiEvent = schedule.events[0];
   const weddingEvent = schedule.events[1];
@@ -35,9 +39,10 @@ export function ShareModal({ isOpen, onClose }: ShareModalProps) {
     `⏰ *Sumuhurtham:* ${muhurtham.timeWindow}\n` +
     `⭐ ${muhurtham.nakshatra} | ${muhurtham.tithi} | ${muhurtham.lagna}\n\n` +
     `📍 *Venue:* ${venue.name}, ${venue.fullAddress}\n\n` +
+    `🏨 *Guest Accommodation:* 24 AC rooms arranged for out-of-town guests\n\n` +
     `📞 *RSVP Contacts:* 7207374807 | 7659098055 | 7093694475\n\n` +
-    `Please join us and grace both celebrations with your sacred presence and blessings:\n` +
-    `${currentUrl}`;
+    `🌸 View the complete royal digital invitation:\n` +
+    `${LIVE_URL}`;
 
   const handleWhatsappShare = () => {
     const encoded = encodeURIComponent(shareText);

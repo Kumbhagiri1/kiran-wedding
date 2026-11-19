@@ -51,6 +51,7 @@ export interface WeddingData {
   eventDateIso: string; // Main wedding target for countdown: 02 Dec 2026, 09:04 AM IST (+05:30)
   coupleImage?: string;
   coupleFullImage?: string;
+  websiteUrl?: string;
   
   groom: {
     title: string;
@@ -187,6 +188,7 @@ export const WEDDING_DATA: WeddingData = {
   eventDateIso: "2026-12-02T09:04:00+05:30", // Preserved: Main wedding countdown targets 2 December 2026, 09:04 AM IST
   coupleImage: "/images/couple-frame.jpg",
   coupleFullImage: "/images/couple.jpg",
+  websiteUrl: "https://tempered-skyblue-squid-71.hostingersite.com",
 
   groom: {
     title: "THE GROOM",

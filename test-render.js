@@ -82,7 +82,9 @@ async function testWebsite() {
     "Kindly contact the family in advance for room reservations.",
     "We look forward to welcoming you!",
     "GANGALLA MAHESWARI",
-    "Kalyanam Vaibhogam"
+    "Kalyanam Vaibhogam",
+    "og-couple.jpg",
+    "tempered-skyblue-squid-71.hostingersite.com"
   ];
 
   if (pageContent.includes("MAHESHWARI") || pageContent.includes("Maheshwari")) {
