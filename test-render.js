@@ -64,6 +64,16 @@ async function testWebsite() {
     console.log('Captured 07-royal-procession-footer.png');
   }
 
+  // 5d. Test clicking "Theen Maar" or "Play Theen Maar" button to start dancing!
+  const dholBtn = await page.$('button::-p-text(Play Theen Maar)');
+  if (dholBtn) {
+    await dholBtn.click();
+    console.log('Clicked Play Theen Maar drum button.');
+    await new Promise(r => setTimeout(r, 600));
+    await footerEl.screenshot({ path: path.join(outDir, '09-dancing-live-stage.png') });
+    console.log('Captured 09-dancing-live-stage.png (Live Dancing Front View)');
+  }
+
   // 6. Test Mobile Viewport (iPhone 14 - 390x844)
   await page.setViewport({ width: 390, height: 844, isMobile: true });
   await new Promise(r => setTimeout(r, 600));
@@ -112,7 +122,13 @@ async function testWebsite() {
     "Sri Devara Subbarayudu",
     "Sri Dakshina Murthy Namah",
     "Royal Wedding Procession",
-    "Play Wedding Dhol Beats",
+    "Theen Maar",
+    "Bhutto Beat",
+    "Hyderabad Marfa",
+    "Royal Pelli Baaja",
+    "తీన్ మార్",
+    "భుట్టో",
+    "మర్ఫా",
     "Dhol Bass (Dhum)",
     "High Slap (Takk)",
     "Tutari Fanfare"
