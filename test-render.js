@@ -95,8 +95,16 @@ async function testWebsite() {
     "Sri Devara Jaganadha Rao",
     "Sri Devara Vishnu Vardhan Rao",
     "Sri Devara Kalyan",
-    "Sri Devara Vijay Rama Rao"
+    "Sri Devara Vijay Rama Rao",
+    "Sri Devara Subbarayudu"
   ];
+
+  const subbaIdx = pageContent.indexOf("Sri Devara Subbarayudu");
+  const venkatIdx = pageContent.indexOf("Sri Kumbhagiri Venkateshwarlu");
+  if (subbaIdx === -1 || venkatIdx === -1 || subbaIdx > venkatIdx) {
+    throw new Error(`Order verification failed! Subbarayudu index: ${subbaIdx}, Venkateshwarlu index: ${venkatIdx}`);
+  }
+  console.log('Order verification: Sri Devara Subbarayudu appears BEFORE Sri Kumbhagiri Venkateshwarlu (PASS)');
 
   if (pageContent.includes("MAHESHWARI") || pageContent.includes("Maheshwari")) {
     throw new Error("Found old spelling Maheshwari in page content!");
