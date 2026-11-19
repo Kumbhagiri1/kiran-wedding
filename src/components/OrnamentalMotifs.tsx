@@ -1,63 +1,20 @@
 import React from "react";
 
-export function GaneshaEmblem({ className = "w-16 h-16" }: { className?: string }) {
+export function GaneshaEmblem({
+  className = "w-16 h-16",
+  alt = "Lord Ganesha Sacred Symbol",
+}: {
+  className?: string;
+  alt?: string;
+}) {
   return (
-    <svg
-      viewBox="0 0 100 100"
-      className={className}
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-label="Lord Ganesha Sacred Symbol"
-    >
-      <defs>
-        <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#C6A15B" />
-          <stop offset="50%" stopColor="#FFF9EF" />
-          <stop offset="100%" stopColor="#C6A15B" />
-        </linearGradient>
-        <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-          <feGaussianBlur stdDeviation="1.5" result="blur" />
-          <feComposite in="SourceGraphic" in2="blur" operator="over" />
-        </filter>
-      </defs>
-      {/* Crown / Mukut */}
-      <path
-        d="M50 12 L55 24 L52 24 L56 32 L44 32 L48 24 L45 24 Z"
-        fill="url(#goldGrad)"
-        stroke="#C6A15B"
-        strokeWidth="1"
-      />
-      <circle cx="50" cy="18" r="2" fill="#641B2E" />
-      {/* Head & Forehead Tilak */}
-      <path
-        d="M38 34 C44 28, 56 28, 62 34 C64 42, 60 48, 58 52"
-        stroke="url(#goldGrad)"
-        strokeWidth="2.5"
-        strokeLinecap="round"
-      />
-      {/* Tilak / Trishul mark */}
-      <path d="M48 28 L52 28 M50 25 L50 31" stroke="#641B2E" strokeWidth="1.5" strokeLinecap="round" />
-      <circle cx="50" cy="33" r="1.5" fill="#C6A15B" />
-      {/* Large Ear Left */}
-      <path
-        d="M38 34 C28 34, 25 44, 30 54 C34 58, 40 56, 42 50"
-        stroke="url(#goldGrad)"
-        strokeWidth="2"
-        strokeLinecap="round"
-      />
-      {/* Trunk (curling gracefully to the right/modak) */}
-      <path
-        d="M52 42 C54 48, 56 56, 54 64 C52 72, 46 76, 42 74 C38 72, 38 66, 44 65 C48 64, 52 68, 56 68 C62 68, 66 62, 66 56 C66 50, 62 48, 58 52"
-        stroke="url(#goldGrad)"
-        strokeWidth="2.5"
-        strokeLinecap="round"
-      />
-      {/* Modak in trunk hand */}
-      <ellipse cx="62" cy="50" rx="3" ry="4" fill="url(#goldGrad)" />
-      {/* Om / Sacred halo aura */}
-      <circle cx="50" cy="46" r="38" stroke="url(#goldGrad)" strokeWidth="0.75" strokeDasharray="3 3" opacity="0.6" />
-      <circle cx="50" cy="46" r="42" stroke="url(#goldGrad)" strokeWidth="0.5" opacity="0.3" />
-    </svg>
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src="/images/ganesha-gold.png"
+      alt={alt}
+      className={`inline-block object-contain filter drop-shadow-[0_2px_10px_rgba(198,161,91,0.45)] select-none pointer-events-none transition-transform hover:scale-105 duration-300 ${className}`}
+      loading="eager"
+    />
   );
 }
 
@@ -208,7 +165,7 @@ export function CornerFlourish({ position = "tl" }: { position: "tl" | "tr" | "b
 
 export function RoyalMonogramPlaceholder({
   initials = "SK & GM",
-  label = "Kiran & Maheshwari",
+  label = "Kiran & Maheswari",
   gender = "couple",
 }: {
   initials?: string;

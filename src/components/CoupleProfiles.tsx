@@ -35,7 +35,7 @@ export function CoupleProfiles() {
               />
               <div className="absolute bottom-4 left-0 right-0 z-20 text-center">
                 <span className="inline-block px-6 py-2 rounded-full bg-[#42101F]/95 border-2 border-gold-antique text-gold-champagne font-heading font-bold text-xs sm:text-base tracking-widest uppercase shadow-gold-glow">
-                  Ch. Sai Kiran & Ch. Sou. Maheshwari
+                  Ch. Sai Kiran & Ch. Sou. Maheswari
                 </span>
               </div>
             </div>
@@ -154,12 +154,12 @@ export function CoupleProfiles() {
                     />
                     <div className="absolute bottom-2 left-0 right-0 z-20 text-center">
                       <span className="px-3 py-0.5 rounded-full bg-[#42101F]/90 border border-gold-antique/70 font-ceremonial text-[10px] text-gold-champagne tracking-wider uppercase">
-                        Ch. Sou. Maheshwari
+                        Ch. Sou. Maheswari
                       </span>
                     </div>
                   </div>
                 ) : (
-                  <RoyalMonogramPlaceholder initials="GM" label="Gangalla Maheshwari" gender="bride" />
+                  <RoyalMonogramPlaceholder initials="GM" label="Gangalla Maheswari" gender="bride" />
                 )}
               </div>
 

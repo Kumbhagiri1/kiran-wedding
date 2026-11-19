@@ -203,12 +203,12 @@ export const WEDDING_DATA: WeddingData = {
   bride: {
     title: "THE BRIDE",
     honorific: "CH. SOU.",
-    name: "GANGALLA MAHESHWARI",
+    name: "GANGALLA MAHESWARI",
     relation: "Only daughter of",
     parents: "Late Sri Gangalla Venkata Ramana & Smt. Gangalla Peddakka",
     nativePlace: "Native of Krishnapuram Village, C.K. Dinne Mandal, Kadapa District.",
     image: "/images/bride-portrait.jpg",
-    portraitPlaceholderLabel: "Ch. Sou. Gangalla Maheshwari",
+    portraitPlaceholderLabel: "Ch. Sou. Gangalla Maheswari",
   },
 
   invocations: {
@@ -230,7 +230,7 @@ export const WEDDING_DATA: WeddingData = {
     heading: "CORDIAL INVITATION",
     paragraphs: [
       "By the boundless grace and divine blessings of the Almighty, and with the cherished blessings of our elders, we are delighted to celebrate a precious and auspicious occasion in our family.",
-      "On the joyous occasion of the wedding of our beloved son, CH. KUMBHAGIRI SAI KIRAN with CH. SOU. GANGALLA MAHESHWARI, we consider it our privilege and immense pleasure to cordially invite you and your family to grace this sacred celebration with your gracious presence.",
+      "On the joyous occasion of the wedding of our beloved son, CH. KUMBHAGIRI SAI KIRAN with CH. SOU. GANGALLA MAHESWARI, we consider it our privilege and immense pleasure to cordially invite you and your family to grace this sacred celebration with your gracious presence.",
       "Amidst the sanctity of Vedic chants, the melodious notes of auspicious wedding music, and the joyful gathering of family and friends, this blessed union shall be solemnised across two auspicious days.",
       "We humbly request you to join us with your family, bless the bride and groom with Akshinthalu, shower your heartfelt wishes upon the newlyweds for a lifetime of happiness, prosperity and togetherness, and honour us by accepting our hospitality.",
     ],
@@ -269,8 +269,8 @@ export const WEDDING_DATA: WeddingData = {
           cardBg: "from-[#FFFBEB] via-[#FEF3C7] to-[#FDE68A]",
         },
         calendar: {
-          title: "Haldi & Music Ceremony - Kumbhagiri Sai Kiran & Gangalla Maheshwari",
-          description: "Traditional Haldi Ceremony & Music Celebrations for the wedding of Kumbhagiri Sai Kiran & Gangalla Maheshwari. Guest Arrival: 04:00 PM. Venue: Krishna Kalyanamandapam, Madras Road, Kadapa.",
+          title: "Haldi & Music Ceremony - Kumbhagiri Sai Kiran & Gangalla Maheswari",
+          description: "Traditional Haldi Ceremony & Music Celebrations for the wedding of Kumbhagiri Sai Kiran & Gangalla Maheswari. Guest Arrival: 04:00 PM. Venue: Krishna Kalyanamandapam, Madras Road, Kadapa.",
           location: "Krishna Kalyanamandapam, Madras Road, Kadapa, Andhra Pradesh, India",
           startDate: "20261201T103000Z", // 04:00 PM IST = 10:30 AM UTC
           endDate: "20261201T153000Z",   // 09:00 PM IST = 03:30 PM UTC
@@ -307,8 +307,8 @@ export const WEDDING_DATA: WeddingData = {
           cardBg: "from-[#42101F] via-[#641B2E] to-[#2A0B14]",
         },
         calendar: {
-          title: "Wedding Ceremony - Kumbhagiri Sai Kiran & Gangalla Maheshwari",
-          description: "Sacred Wedding Ceremony of CH. Kumbhagiri Sai Kiran and CH. Sou. Gangalla Maheshwari. Auspicious Sumuhurtham: 09:04 AM – 09:37 AM (Uttara Phalguni, Krishna Navami, Dhanu Lagna) at Krishna Kalyanamandapam, Madras Road, Kadapa.",
+          title: "Wedding Ceremony - Kumbhagiri Sai Kiran & Gangalla Maheswari",
+          description: "Sacred Wedding Ceremony of CH. Kumbhagiri Sai Kiran and CH. Sou. Gangalla Maheswari. Auspicious Sumuhurtham: 09:04 AM – 09:37 AM (Uttara Phalguni, Krishna Navami, Dhanu Lagna) at Krishna Kalyanamandapam, Madras Road, Kadapa.",
           location: "Krishna Kalyanamandapam, Madras Road, Kadapa, Andhra Pradesh, India",
           startDate: "20261202T033400Z", // 09:04 AM IST = 03:34 AM UTC
           endDate: "20261202T083000Z",   // ~02:00 PM IST = 08:30 AM UTC
@@ -432,8 +432,8 @@ export const WEDDING_DATA: WeddingData = {
   },
 
   calendar: {
-    title: "Wedding of Kumbhagiri Sai Kiran & Gangalla Maheshwari",
-    description: "Sacred Wedding Ceremony of CH. Kumbhagiri Sai Kiran and CH. Sou. Gangalla Maheshwari at Krishna Kalyanamandapam, Madras Road, Kadapa. Sumuhurtham: 09:04 AM – 09:37 AM.",
+    title: "Wedding of Kumbhagiri Sai Kiran & Gangalla Maheswari",
+    description: "Sacred Wedding Ceremony of CH. Kumbhagiri Sai Kiran and CH. Sou. Gangalla Maheswari at Krishna Kalyanamandapam, Madras Road, Kadapa. Sumuhurtham: 09:04 AM – 09:37 AM.",
     location: "Krishna Kalyanamandapam, Madras Road, Kadapa, Andhra Pradesh, India",
     startDate: "20261202T033400Z", // 09:04 AM IST = 03:34 AM UTC
     endDate: "20261202T083000Z",   // ~02:00 PM IST = 08:30 AM UTC

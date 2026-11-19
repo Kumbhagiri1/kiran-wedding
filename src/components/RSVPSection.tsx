@@ -121,7 +121,7 @@ export function RSVPSection() {
                     <span>Call Now</span>
                   </a>
                   <a
-                    href={`https://wa.me/${contact.contact.replace(/[^0-9]/g, '')}?text=${encodeURIComponent("Namaste! Regarding the wedding of Kiran & Maheshwari:")}`}
+                    href={`https://wa.me/${contact.contact.replace(/[^0-9]/g, '')}?text=${encodeURIComponent("Namaste! Regarding the wedding of Kiran & Maheswari:")}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-[11px] font-heading font-semibold text-emerald-400 hover:text-emerald-300 flex items-center space-x-1"

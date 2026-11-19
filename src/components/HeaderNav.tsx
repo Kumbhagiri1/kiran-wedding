@@ -67,7 +67,7 @@ export function HeaderNav() {
             </span>
             <div className="flex flex-col">
               <span className="font-heading font-bold text-sm sm:text-base text-gold-champagne tracking-wider leading-none">
-                Kiran & Maheshwari
+                Kiran & Maheswari
               </span>
               <span className="font-ceremonial text-[9px] text-cream-warm/70 tracking-widest uppercase">
                 02 Dec 2026

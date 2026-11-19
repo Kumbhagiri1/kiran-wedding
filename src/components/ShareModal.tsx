@@ -86,7 +86,7 @@ export function ShareModal({ isOpen, onClose }: ShareModalProps) {
             Share Royal Invitation
           </h3>
           <p className="font-body text-xs text-darkText/70 mt-1">
-            Spread the joyous word of Kiran & Maheshwari&apos;s sacred union
+            Spread the joyous word of Kiran & Maheswari&apos;s sacred union
           </p>
         </div>
 

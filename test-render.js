@@ -80,8 +80,13 @@ async function testWebsite() {
     "GUEST ACCOMMODATION",
     "24 air-conditioned rooms",
     "Kindly contact the family in advance for room reservations.",
-    "We look forward to welcoming you!"
+    "We look forward to welcoming you!",
+    "GANGALLA MAHESWARI"
   ];
+
+  if (pageContent.includes("MAHESHWARI") || pageContent.includes("Maheshwari")) {
+    throw new Error("Found old spelling Maheshwari in page content!");
+  }
 
   for (const c of checks) {
     const hasText = pageContent.includes(c);

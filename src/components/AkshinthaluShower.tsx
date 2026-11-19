@@ -10,7 +10,7 @@ export function AkshinthaluShower() {
 
   useEffect(() => {
     // Read cached blessing count or set initial auspicious count (108)
-    const stored = localStorage.getItem("kiran_maheshwari_blessings");
+    const stored = localStorage.getItem("kiran_maheswari_blessings");
     if (stored) {
       const parsed = parseInt(stored, 10);
       if (!isNaN(parsed) && parsed >= 108) {
@@ -24,7 +24,7 @@ export function AkshinthaluShower() {
     const newCount = blessingCount + 1;
     setBlessingCount(newCount);
     try {
-      localStorage.setItem("kiran_maheshwari_blessings", newCount.toString());
+      localStorage.setItem("kiran_maheswari_blessings", newCount.toString());
     } catch {}
 
     // Turmeric Gold, Marigold Orange, Crimson Rose, and Saffron Petals

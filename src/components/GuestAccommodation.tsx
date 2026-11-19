@@ -125,7 +125,7 @@ export function GuestAccommodation() {
                     </a>
                     <a
                       href={`https://wa.me/${contact.phone.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(
-                        "Namaste! Regarding the wedding of Kiran & Maheshwari, I would like to request room accommodation for out-of-town guests."
+                        "Namaste! Regarding the wedding of Kiran & Maheswari, I would like to request room accommodation for out-of-town guests."
                       )}`}
                       target="_blank"
                       rel="noopener noreferrer"

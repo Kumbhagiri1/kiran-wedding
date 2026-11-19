@@ -37,7 +37,7 @@ export function WeddingMuhurtham() {
     const blob = new Blob([icsContent], { type: "text/calendar;charset=utf-8" });
     const link = document.createElement("a");
     link.href = window.URL.createObjectURL(blob);
-    link.setAttribute("download", "Kiran_Maheshwari_Wedding.ics");
+    link.setAttribute("download", "Kiran_Maheswari_Wedding.ics");
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
