@@ -165,6 +165,9 @@ export function DownloadInvitation() {
                 <span className="block text-[11px] text-darkText/70 italic mt-0.5">
                   {compliments.footerNote}
                 </span>
+                <p className="text-[11px] font-heading font-semibold text-maroon mt-2">
+                  RSVP & Contact: 7207374807 • 7659098055 • 7093694475
+                </p>
               </div>
 
               <div className="pt-3 border-t border-gold-antique/30">

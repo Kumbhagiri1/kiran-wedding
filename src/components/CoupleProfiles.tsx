@@ -13,7 +13,7 @@ export function CoupleProfiles() {
 
       <div className="relative max-w-6xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-12 sm:mb-16">
+        <div className="text-center mb-10 sm:mb-14">
           <span className="font-ceremonial text-xs sm:text-sm tracking-[0.25em] text-gold-champagne uppercase font-semibold">
             Two Souls, Bound by Vedic Destiny
           </span>
@@ -22,6 +22,28 @@ export function CoupleProfiles() {
           </h2>
           <GoldDivider className="my-4" symbol="lotus" />
         </div>
+
+        {/* Grand Centerpiece Royal Couple Portrait */}
+        {WEDDING_DATA.coupleImage && (
+          <div className="mb-12 sm:mb-16 max-w-3xl mx-auto text-center px-2">
+            <div className="relative rounded-3xl border-4 border-gold-antique p-2 sm:p-3 shadow-royal bg-gradient-to-b from-[#641B2E] via-[#42101F] to-[#2A0B14] overflow-hidden group">
+              <div className="absolute inset-2 sm:inset-3 rounded-2xl border border-gold-champagne/30 pointer-events-none z-10" />
+              <img
+                src={WEDDING_DATA.coupleImage}
+                alt={`${groom.name} & ${bride.name}`}
+                className="w-full h-auto max-h-[460px] object-cover rounded-2xl group-hover:scale-[1.02] transition-transform duration-700 filter contrast-105"
+              />
+              <div className="absolute bottom-4 left-0 right-0 z-20 text-center">
+                <span className="inline-block px-6 py-2 rounded-full bg-[#42101F]/95 border-2 border-gold-antique text-gold-champagne font-heading font-bold text-xs sm:text-base tracking-widest uppercase shadow-gold-glow">
+                  Ch. Sai Kiran & Ch. Sou. Maheshwari
+                </span>
+              </div>
+            </div>
+            <p className="font-display italic text-gold-antique text-sm sm:text-base mt-3">
+              United in sacred love, blessed by elders, bound for eternity.
+            </p>
+          </div>
+        )}
 
         {/* Symmetrical Profiles Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">

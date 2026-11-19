@@ -20,7 +20,7 @@ async function testWebsite() {
     fs.mkdirSync(outDir);
   }
 
-  // 1. Screenshot of Opening Modal
+  // 1. Screenshot of Opening Modal with Couple Photo
   await page.screenshot({ path: path.join(outDir, '01-opening-modal.png') });
   console.log('Captured 01-opening-modal.png');
 
@@ -36,7 +36,7 @@ async function testWebsite() {
   await page.screenshot({ path: path.join(outDir, '02-desktop-full.png'), fullPage: true });
   console.log('Captured 02-desktop-full.png');
 
-  // 4. Capture dedicated section screenshot of Couple Profiles (#couple) with Groom Photo
+  // 4. Capture dedicated section screenshot of Couple Profiles (#couple)
   const coupleEl = await page.$('#couple');
   if (coupleEl) {
     await coupleEl.screenshot({ path: path.join(outDir, '05-couple-profiles-with-photo.png') });
@@ -55,6 +55,30 @@ async function testWebsite() {
   await new Promise(r => setTimeout(r, 600));
   await page.screenshot({ path: path.join(outDir, '04-mobile-full.png'), fullPage: true });
   console.log('Captured 04-mobile-full.png');
+
+  // 7. Verify elements presence
+  const pageContent = await page.content();
+  const checks = [
+    "KRISHNA KALYANAMANDAPAM",
+    "Sri Lakshman",
+    "7207374807",
+    "7659098055",
+    "7093694475",
+    "HALDI &amp; MUSIC CEREMONY",
+    "01 DECEMBER 2026",
+    "Guest Arrival: 04:00 PM",
+    "WEDDING CEREMONY",
+    "02 DECEMBER 2026",
+    "09:04 AM – 09:37 AM"
+  ];
+
+  for (const c of checks) {
+    const hasText = pageContent.includes(c);
+    console.log(`Verification [${c}]: ${hasText ? 'PASS' : 'FAIL'}`);
+    if (!hasText) {
+      throw new Error(`Missing expected text: ${c}`);
+    }
+  }
 
   await browser.close();
   console.log('All tests and visual captures completed successfully!');

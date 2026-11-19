@@ -49,6 +49,8 @@ export interface WeddingData {
   openingSubBlessing: string;
   eventDateDisplay: string;
   eventDateIso: string; // Main wedding target for countdown: 02 Dec 2026, 09:04 AM IST (+05:30)
+  coupleImage?: string;
+  coupleFullImage?: string;
   
   groom: {
     title: string;
@@ -168,6 +170,8 @@ export const WEDDING_DATA: WeddingData = {
   openingSubBlessing: "With the Divine Blessings of Lord Venkateshwara Swamy and the Love of Our Elders",
   eventDateDisplay: "02 DECEMBER 2026",
   eventDateIso: "2026-12-02T09:04:00+05:30", // Preserved: Main wedding countdown targets 2 December 2026, 09:04 AM IST
+  coupleImage: "/images/couple-frame.jpg",
+  coupleFullImage: "/images/couple.jpg",
 
   groom: {
     title: "THE GROOM",
@@ -188,7 +192,8 @@ export const WEDDING_DATA: WeddingData = {
     relation: "Only daughter of",
     parents: "Late Sri Gangalla Venkata Ramana & Smt. Gangalla Peddakka",
     nativePlace: "Native of Krishnapuram Village, C.K. Dinne Mandal, Kadapa District.",
-    portraitPlaceholderLabel: "Bride Portrait Placeholder",
+    image: "/images/bride-portrait.jpg",
+    portraitPlaceholderLabel: "Ch. Sou. Gangalla Maheshwari",
   },
 
   invocations: {
@@ -232,9 +237,9 @@ export const WEDDING_DATA: WeddingData = {
         guestArrivalHighlight: "We warmly invite you to arrive by 4:00 PM and celebrate this special evening with us!",
         eventName: "Traditional Haldi Ceremony & Music Celebrations",
         tagline: "An evening filled with colours, traditions, music and happiness!",
-        venueName: "Sri Krishna Kalyana Mandapam",
+        venueName: "Krishna Kalyanamandapam",
         venueAddress: "Madras Road, Kadapa, Andhra Pradesh, India.",
-        directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=Krishna+Kalyana+Mandapam+Madras+Road+Kadapa+Andhra+Pradesh",
+        directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=Krishna+Kalyanamandapam+Madras+Road+Kadapa+Andhra+Pradesh",
         descriptionParagraphs: [
           "An evening filled with colours, traditions, music and happiness!",
           "Join us as we celebrate the beautiful pre-wedding traditions with Haldi, joyful music and the warmth of family and friends.",
@@ -250,8 +255,8 @@ export const WEDDING_DATA: WeddingData = {
         },
         calendar: {
           title: "Haldi & Music Ceremony - Kumbhagiri Sai Kiran & Gangalla Maheshwari",
-          description: "Traditional Haldi Ceremony & Music Celebrations for the wedding of Kumbhagiri Sai Kiran & Gangalla Maheshwari. Guest Arrival: 04:00 PM. Venue: Sri Krishna Kalyana Mandapam, Madras Road, Kadapa.",
-          location: "Sri Krishna Kalyana Mandapam, Madras Road, Kadapa, Andhra Pradesh, India",
+          description: "Traditional Haldi Ceremony & Music Celebrations for the wedding of Kumbhagiri Sai Kiran & Gangalla Maheshwari. Guest Arrival: 04:00 PM. Venue: Krishna Kalyanamandapam, Madras Road, Kadapa.",
+          location: "Krishna Kalyanamandapam, Madras Road, Kadapa, Andhra Pradesh, India",
           startDate: "20261201T103000Z", // 04:00 PM IST = 10:30 AM UTC
           endDate: "20261201T153000Z",   // 09:00 PM IST = 03:30 PM UTC
           fileName: "Haldi_and_Music_Ceremony.ics",
@@ -266,9 +271,9 @@ export const WEDDING_DATA: WeddingData = {
         displayTiming: "Auspicious Muhurtham: 09:04 AM – 09:37 AM",
         eventName: "The Auspicious Wedding Muhurtham",
         tagline: "Sacred Vedic Union, Akshinthalu Blessing & Mangalya Dharana",
-        venueName: "Sri Krishna Kalyana Mandapam",
+        venueName: "Krishna Kalyanamandapam",
         venueAddress: "Madras Road, Kadapa, Andhra Pradesh, India.",
-        directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=Krishna+Kalyana+Mandapam+Madras+Road+Kadapa+Andhra+Pradesh",
+        directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=Krishna+Kalyanamandapam+Madras+Road+Kadapa+Andhra+Pradesh",
         panchangam: {
           nakshatra: "Uttara Phalguni Nakshatra",
           tithi: "Krishna Navami Tithi",
@@ -288,8 +293,8 @@ export const WEDDING_DATA: WeddingData = {
         },
         calendar: {
           title: "Wedding Ceremony - Kumbhagiri Sai Kiran & Gangalla Maheshwari",
-          description: "Sacred Wedding Ceremony of CH. Kumbhagiri Sai Kiran and CH. Sou. Gangalla Maheshwari. Auspicious Sumuhurtham: 09:04 AM – 09:37 AM (Uttara Phalguni, Krishna Navami, Dhanu Lagna) at Sri Krishna Kalyana Mandapam, Madras Road, Kadapa.",
-          location: "Sri Krishna Kalyana Mandapam, Madras Road, Kadapa, Andhra Pradesh, India",
+          description: "Sacred Wedding Ceremony of CH. Kumbhagiri Sai Kiran and CH. Sou. Gangalla Maheshwari. Auspicious Sumuhurtham: 09:04 AM – 09:37 AM (Uttara Phalguni, Krishna Navami, Dhanu Lagna) at Krishna Kalyanamandapam, Madras Road, Kadapa.",
+          location: "Krishna Kalyanamandapam, Madras Road, Kadapa, Andhra Pradesh, India",
           startDate: "20261202T033400Z", // 09:04 AM IST = 03:34 AM UTC
           endDate: "20261202T083000Z",   // ~02:00 PM IST = 08:30 AM UTC
           fileName: "Wedding_Muhurtham_Ceremony.ics",
@@ -316,17 +321,17 @@ export const WEDDING_DATA: WeddingData = {
   },
 
   venue: {
-    name: "SRI KRISHNA KALYANA MANDAPAM",
+    name: "KRISHNA KALYANAMANDAPAM",
     tagline: "Auspicious Wedding Venue for Both Celebrations",
     addressLine1: "Madras Road",
     addressLine2: "Kadapa, Andhra Pradesh - 516001, India",
-    fullAddress: "Sri Krishna Kalyana Mandapam, Madras Road, Kadapa, Andhra Pradesh, India",
+    fullAddress: "Krishna Kalyanamandapam, Madras Road, Kadapa, Andhra Pradesh, India",
     city: "Kadapa",
     state: "Andhra Pradesh",
     country: "India",
-    mapsSearchUrl: "https://www.google.com/maps/search/?api=1&query=Krishna+Kalyana+Mandapam+Madras+Road+Kadapa+Andhra+Pradesh",
-    directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=Krishna+Kalyana+Mandapam+Madras+Road+Kadapa+Andhra+Pradesh",
-    embedMapUrl: "https://maps.google.com/maps?q=Krishna+Kalyana+Mandapam+Madras+Road+Kadapa&t=&z=15&ie=UTF8&iwloc=&output=embed",
+    mapsSearchUrl: "https://www.google.com/maps/search/?api=1&query=Krishna+Kalyanamandapam+Madras+Road+Kadapa+Andhra+Pradesh",
+    directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=Krishna+Kalyanamandapam+Madras+Road+Kadapa+Andhra+Pradesh",
+    embedMapUrl: "https://maps.google.com/maps?q=Krishna+Kalyanamandapam+Madras+Road+Kadapa&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
 
   elders: {
@@ -345,7 +350,7 @@ export const WEDDING_DATA: WeddingData = {
     title: "BROTHERS",
     list: [
       "Sri Arun Kumar",
-      "Sri Lakshumaiah",
+      "Sri Lakshman",
     ],
   },
 
@@ -368,23 +373,28 @@ export const WEDDING_DATA: WeddingData = {
     description: "Please grace us with your confirmation for the Haldi & Music Ceremony and Wedding Ceremony so that we may extend our warmest hospitality to you and your family.",
     contactPlaceholders: [
       {
-        label: "Kumbhagiri Family Representative",
-        contact: "[Configured Phone Placeholder: +91 9XXXXXXXXX]",
-        note: "Available on WhatsApp & Phone",
+        label: "Sri Kumbhagiri Srinivas & Family",
+        contact: "+91 7207374807",
+        note: "Calls & WhatsApp",
       },
       {
-        label: "Hospitality & Venue Inquiries",
-        contact: "[Configured Email Placeholder: rsvp@kumbhagiriwedding.com]",
-        note: "For guest reception & accommodation assistance",
+        label: "Family Representative",
+        contact: "+91 7659098055",
+        note: "Calls & WhatsApp",
+      },
+      {
+        label: "Hospitality & Assistance",
+        contact: "+91 7093694475",
+        note: "Calls & WhatsApp",
       },
     ],
-    defaultWhatsappNumber: "919000000000", // Clearly designated placeholder number
+    defaultWhatsappNumber: "917207374807",
   },
 
   calendar: {
     title: "Wedding of Kumbhagiri Sai Kiran & Gangalla Maheshwari",
-    description: "Sacred Wedding Ceremony of CH. Kumbhagiri Sai Kiran and CH. Sou. Gangalla Maheshwari at Sri Krishna Kalyana Mandapam, Madras Road, Kadapa. Sumuhurtham: 09:04 AM – 09:37 AM.",
-    location: "Sri Krishna Kalyana Mandapam, Madras Road, Kadapa, Andhra Pradesh, India",
+    description: "Sacred Wedding Ceremony of CH. Kumbhagiri Sai Kiran and CH. Sou. Gangalla Maheshwari at Krishna Kalyanamandapam, Madras Road, Kadapa. Sumuhurtham: 09:04 AM – 09:37 AM.",
+    location: "Krishna Kalyanamandapam, Madras Road, Kadapa, Andhra Pradesh, India",
     startDate: "20261202T033400Z", // 09:04 AM IST = 03:34 AM UTC
     endDate: "20261202T083000Z",   // ~02:00 PM IST = 08:30 AM UTC
   },

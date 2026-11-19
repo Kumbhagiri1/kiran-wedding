@@ -35,6 +35,7 @@ export function ShareModal({ isOpen, onClose }: ShareModalProps) {
     `⏰ *Sumuhurtham:* ${muhurtham.timeWindow}\n` +
     `⭐ ${muhurtham.nakshatra} | ${muhurtham.tithi} | ${muhurtham.lagna}\n\n` +
     `📍 *Venue:* ${venue.name}, ${venue.fullAddress}\n\n` +
+    `📞 *RSVP Contacts:* 7207374807 | 7659098055 | 7093694475\n\n` +
     `Please join us and grace both celebrations with your sacred presence and blessings:\n` +
     `${currentUrl}`;
 

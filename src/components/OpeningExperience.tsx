@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { GaneshaEmblem, KalashIcon, GoldDivider } from "./OrnamentalMotifs";
 import { WEDDING_DATA } from "@/config/weddingData";
 import { MailOpen, Sparkles, X } from "lucide-react";
+import confetti from "canvas-confetti";
 
 interface OpeningExperienceProps {
   onOpenComplete?: () => void;
@@ -25,16 +26,47 @@ export function OpeningExperience({ onOpenComplete }: OpeningExperienceProps) {
     } catch {}
   }, [onOpenComplete]);
 
+  const triggerFlowerShower = () => {
+    // Auspicious flower & Akshinthalu shower cascade
+    const colors = ["#C6A15B", "#E8D6AD", "#FFD700", "#FFB300", "#82263E", "#FF4500"];
+    confetti({
+      particleCount: 90,
+      spread: 75,
+      origin: { y: 0.6 },
+      colors: colors,
+      shapes: ["circle", "square"],
+      scalar: 0.9,
+      ticks: 250,
+    });
+    setTimeout(() => {
+      confetti({
+        particleCount: 60,
+        angle: 60,
+        spread: 60,
+        origin: { x: 0.1, y: 0.65 },
+        colors: colors,
+      });
+      confetti({
+        particleCount: 60,
+        angle: 120,
+        spread: 60,
+        origin: { x: 0.9, y: 0.65 },
+        colors: colors,
+      });
+    }, 250);
+  };
+
   const completeDismissal = () => {
     setIsOpening(true);
     setIsOpen(true);
+    triggerFlowerShower();
     try {
       sessionStorage.setItem("kiran_wedding_envelope_opened", "true");
     } catch {}
     setTimeout(() => {
       setIsDismissed(true);
       if (onOpenComplete) onOpenComplete();
-    }, 450);
+    }, 500);
   };
 
   const handleOpen = () => {
@@ -119,6 +151,20 @@ export function OpeningExperience({ onOpenComplete }: OpeningExperienceProps) {
               {WEDDING_DATA.bride.name}
             </h1>
           </div>
+
+          {/* Couple Photo in Royal Gold Frame */}
+          {WEDDING_DATA.coupleImage && (
+            <div className="my-3 flex justify-center">
+              <div className="relative w-44 h-32 sm:w-52 sm:h-36 rounded-2xl border-2 border-gold-antique p-1 shadow-royal bg-gradient-to-b from-[#42101F] to-[#2A0B14] overflow-hidden group">
+                <img
+                  src={WEDDING_DATA.coupleImage}
+                  alt={`${WEDDING_DATA.groom.name} & ${WEDDING_DATA.bride.name}`}
+                  className="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500 filter contrast-105"
+                />
+                <div className="absolute inset-1 rounded-xl border border-gold-champagne/40 pointer-events-none" />
+              </div>
+            </div>
+          )}
 
           {/* Date Badge */}
           <div className="inline-flex items-center space-x-2 px-5 py-2 rounded-full border border-gold-antique bg-cream-warm shadow-inner my-2">

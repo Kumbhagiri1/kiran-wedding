@@ -81,25 +81,44 @@ export function RSVPSection() {
 
           <div className="absolute inset-3 rounded-2xl border border-gold-champagne/20 pointer-events-none" />
 
-          {/* Configurable Contact Details Notice */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+          {/* Family Contact Numbers */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3.5 mb-8">
             {rsvp.contactPlaceholders.map((contact, idx) => (
-              <div key={idx} className="p-4 rounded-xl bg-[#2A0B14]/60 border border-gold-antique/30 flex items-start space-x-3">
-                {idx === 0 ? (
-                  <Phone className="w-5 h-5 text-gold-antique flex-shrink-0 mt-0.5" />
-                ) : (
-                  <Mail className="w-5 h-5 text-gold-antique flex-shrink-0 mt-0.5" />
-                )}
-                <div>
-                  <span className="font-ceremonial text-xs text-gold-champagne font-bold tracking-wider uppercase block">
-                    {contact.label}
-                  </span>
-                  <p className="font-body text-sm font-semibold text-gold-light mt-0.5">
-                    {contact.contact}
-                  </p>
-                  <p className="text-[11px] text-cream-warm/70 italic mt-0.5">
-                    {contact.note}
-                  </p>
+              <div key={idx} className="p-4 rounded-xl bg-[#2A0B14]/70 border border-gold-antique/40 flex flex-col justify-between shadow-sm hover:border-gold-antique transition-colors">
+                <div className="flex items-start space-x-3">
+                  <div className="w-8 h-8 rounded-full bg-[#42101F] border border-gold-antique/60 flex items-center justify-center flex-shrink-0 text-gold-champagne">
+                    <Phone className="w-4 h-4 text-gold-antique" />
+                  </div>
+                  <div>
+                    <span className="font-ceremonial text-[11px] text-gold-champagne font-bold tracking-wider uppercase block">
+                      {contact.label}
+                    </span>
+                    <a
+                      href={`tel:${contact.contact.replace(/\s+/g, '')}`}
+                      className="font-heading text-base font-bold text-gold-light hover:text-white transition-colors block mt-0.5"
+                    >
+                      {contact.contact}
+                    </a>
+                    <p className="text-[10px] text-cream-warm/70 italic mt-0.5">
+                      {contact.note}
+                    </p>
+                  </div>
+                </div>
+                <div className="mt-3 pt-2 border-t border-gold-antique/20 flex items-center justify-between">
+                  <a
+                    href={`tel:${contact.contact.replace(/\s+/g, '')}`}
+                    className="text-[11px] font-heading font-semibold text-gold-champagne hover:underline flex items-center space-x-1"
+                  >
+                    <span>Call Now</span>
+                  </a>
+                  <a
+                    href={`https://wa.me/${contact.contact.replace(/[^0-9]/g, '')}?text=${encodeURIComponent("Namaste! Regarding the wedding of Kiran & Maheshwari:")}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[11px] font-heading font-semibold text-emerald-400 hover:text-emerald-300 flex items-center space-x-1"
+                  >
+                    <span>WhatsApp</span>
+                  </a>
                 </div>
               </div>
             ))}

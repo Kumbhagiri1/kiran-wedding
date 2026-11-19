@@ -80,7 +80,7 @@ export function WeddingVenue() {
           <div className="mt-8 rounded-2xl overflow-hidden border-2 border-gold-antique/50 shadow-inner bg-[#2A0B14]">
             <div className="relative w-full h-72 sm:h-96">
               <iframe
-                title="Krishna Kalyana Mandapam Kadapa Map Location"
+                title="Krishna Kalyanamandapam Kadapa Map Location"
                 src={venue.embedMapUrl}
                 width="100%"
                 height="100%"
@@ -114,7 +114,7 @@ export function WeddingVenue() {
                   Guest Parking & Hospitality
                 </h4>
                 <p className="font-body text-xs text-cream-warm/90 mt-1">
-                  Dedicated guest parking and welcome reception will be available at the Krishna Kalyana Mandapam premises.
+                  Dedicated guest parking and welcome reception will be available at the Krishna Kalyanamandapam premises.
                 </p>
               </div>
             </div>
