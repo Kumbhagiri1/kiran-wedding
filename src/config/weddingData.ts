@@ -117,6 +117,21 @@ export interface WeddingData {
     directionsUrl: string;
     embedMapUrl: string;
   };
+
+  accommodation: {
+    title: string;
+    subtitle: string;
+    badge: string;
+    intro: string;
+    reservationNote: string;
+    limitedNotice: string;
+    callToAction: string;
+    closingGreeting: string;
+    contacts: {
+      name: string;
+      phone: string;
+    }[];
+  };
   
   elders: {
     title: string;
@@ -332,6 +347,31 @@ export const WEDDING_DATA: WeddingData = {
     mapsSearchUrl: "https://www.google.com/maps/search/?api=1&query=Krishna+Kalyanamandapam+Madras+Road+Kadapa+Andhra+Pradesh",
     directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=Krishna+Kalyanamandapam+Madras+Road+Kadapa+Andhra+Pradesh",
     embedMapUrl: "https://maps.google.com/maps?q=Krishna+Kalyanamandapam+Madras+Road+Kadapa&t=&z=15&ie=UTF8&iwloc=&output=embed",
+  },
+
+  accommodation: {
+    title: "GUEST ACCOMMODATION",
+    subtitle: "Comfortable Stay Arranged For Out-Of-Town Guests",
+    badge: "24 Air-Conditioned Rooms",
+    intro: "For the convenience of our out-of-town guests, we have arranged 24 air-conditioned rooms.",
+    reservationNote: "Guests who require accommodation are kindly requested to inform us in advance so that we can reserve a room for them.",
+    limitedNotice: "As the number of rooms is limited, reservations will be confirmed subject to availability.",
+    callToAction: "Kindly contact the family in advance for room reservations.",
+    closingGreeting: "We look forward to welcoming you!",
+    contacts: [
+      {
+        name: "Hospitality & Room Reservations",
+        phone: "+91 7659098055",
+      },
+      {
+        name: "Guest Inquiries Desk",
+        phone: "+91 7093694475",
+      },
+      {
+        name: "Sri Kumbhagiri Srinivas",
+        phone: "+91 7207374807",
+      },
+    ],
   },
 
   elders: {

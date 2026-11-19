@@ -29,6 +29,7 @@ export function HeaderNav() {
     { label: "2-Day Schedule", href: "#itinerary" },
     { label: "Muhurtham", href: "#muhurtham" },
     { label: "Venue", href: "#venue" },
+    { label: "Stay", href: "#accommodation" },
     { label: "Family", href: "#family" },
     { label: "RSVP", href: "#rsvp" },
   ];

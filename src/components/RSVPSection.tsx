@@ -11,6 +11,7 @@ export function RSVPSection() {
   const [name, setName] = useState("");
   const [guests, setGuests] = useState("2");
   const [status, setStatus] = useState<"attending_both" | "attending_wedding" | "attending_haldi" | "regrets">("attending_both");
+  const [needsAccommodation, setNeedsAccommodation] = useState<"no" | "yes_1_room" | "yes_2_rooms">("no");
   const [wishes, setWishes] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
@@ -43,10 +44,18 @@ export function RSVPSection() {
   };
 
   const generateWhatsappMessage = () => {
+    const accommodationText =
+      needsAccommodation === "yes_1_room"
+        ? "Yes (Requesting 1 AC Room for out-of-town guests)"
+        : needsAccommodation === "yes_2_rooms"
+        ? "Yes (Requesting 2 AC Rooms for out-of-town guests)"
+        : "Not required / Local guest";
+
     const text = `*Wedding RSVP for ${groom.name} & ${bride.name}*\n\n` +
       `*Guest Name:* ${name || "Guest"}\n` +
       `*Attendance:* ${getStatusLabel()}\n` +
       `*Number of Guests:* ${guests}\n` +
+      `*Accommodation Request:* ${accommodationText}\n` +
       (wishes ? `*Wishes:* ${wishes}\n\n` : "\n") +
       `Looking forward to celebrating with the Kumbhagiri & Gangalla families!`;
 
@@ -203,6 +212,24 @@ export function RSVPSection() {
                     <option value="5+">5+ (With Family)</option>
                   </select>
                 </div>
+              </div>
+
+              <div>
+                <label className="block font-ceremonial text-xs uppercase tracking-widest text-gold-champagne font-semibold mb-1.5">
+                  Do You Require AC Room Accommodation? (24 Rooms Available)
+                </label>
+                <select
+                  value={needsAccommodation}
+                  onChange={(e) => setNeedsAccommodation(e.target.value as "no" | "yes_1_room" | "yes_2_rooms")}
+                  className="w-full px-4 py-3 rounded-xl bg-[#2A0B14]/80 border border-gold-antique/40 text-cream-ivory focus:outline-none focus:ring-2 focus:ring-gold-antique font-body text-sm"
+                >
+                  <option value="no">No accommodation needed / Local resident</option>
+                  <option value="yes_1_room">Yes, please reserve 1 AC Room (Subject to availability)</option>
+                  <option value="yes_2_rooms">Yes, please reserve 2 AC Rooms (Subject to availability)</option>
+                </select>
+                <p className="text-[11px] text-cream-warm/70 italic mt-1">
+                  * 24 air-conditioned rooms arranged for out-of-town guests. Confirmed in advance subject to availability.
+                </p>
               </div>
 
               <div>

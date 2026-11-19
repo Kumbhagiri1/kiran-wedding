@@ -10,6 +10,7 @@ import { CoupleProfiles } from "@/components/CoupleProfiles";
 import { TwoDaySchedule } from "@/components/TwoDaySchedule";
 import { WeddingMuhurtham } from "@/components/WeddingMuhurtham";
 import { WeddingVenue } from "@/components/WeddingVenue";
+import { GuestAccommodation } from "@/components/GuestAccommodation";
 import { FamilyAndElders } from "@/components/FamilyAndElders";
 import { ClosingMessage } from "@/components/ClosingMessage";
 import { RSVPSection } from "@/components/RSVPSection";
@@ -49,6 +50,9 @@ export default function WeddingPage() {
 
       {/* SECTION 6: Wedding Venue & Google Maps Integration */}
       <WeddingVenue />
+
+      {/* Guest Accommodation: 24 AC Rooms */}
+      <GuestAccommodation />
 
       {/* SECTION 7 & 8: Family, Elders & With Best Compliments From */}
       <FamilyAndElders />

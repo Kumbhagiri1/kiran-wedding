@@ -50,6 +50,13 @@ async function testWebsite() {
     console.log('Captured 03-two-day-itinerary.png');
   }
 
+  // 5b. Capture dedicated section screenshot of Guest Accommodation (#accommodation)
+  const accomEl = await page.$('#accommodation');
+  if (accomEl) {
+    await accomEl.screenshot({ path: path.join(outDir, '06-guest-accommodation.png') });
+    console.log('Captured 06-guest-accommodation.png');
+  }
+
   // 6. Test Mobile Viewport (iPhone 14 - 390x844)
   await page.setViewport({ width: 390, height: 844, isMobile: true });
   await new Promise(r => setTimeout(r, 600));
@@ -69,7 +76,11 @@ async function testWebsite() {
     "Guest Arrival: 04:00 PM",
     "WEDDING CEREMONY",
     "02 DECEMBER 2026",
-    "09:04 AM – 09:37 AM"
+    "09:04 AM – 09:37 AM",
+    "GUEST ACCOMMODATION",
+    "24 air-conditioned rooms",
+    "Kindly contact the family in advance for room reservations.",
+    "We look forward to welcoming you!"
   ];
 
   for (const c of checks) {

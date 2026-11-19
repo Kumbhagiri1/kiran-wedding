@@ -143,6 +143,9 @@ export function DownloadInvitation() {
                 <p className="font-body text-xs text-darkText/80">
                   {venue.fullAddress}
                 </p>
+                <p className="text-[11px] font-body text-maroon/90 mt-1 font-semibold italic">
+                  * Guest Accommodation: 24 AC rooms arranged for out-of-town guests. Please contact the family in advance for reservations.
+                </p>
               </div>
 
               {/* Family & Elders */}

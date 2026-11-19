@@ -119,6 +119,24 @@ export function WeddingVenue() {
               </div>
             </div>
           </div>
+
+          {/* Guest Accommodation Callout */}
+          <div className="mt-4 p-4 rounded-2xl bg-gradient-to-r from-gold-dark/20 via-gold-antique/30 to-gold-dark/20 border border-gold-antique/50 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+            <div>
+              <span className="font-ceremonial text-xs uppercase tracking-widest text-gold-champagne font-bold block">
+                Out-Of-Town Guest Stay
+              </span>
+              <p className="font-body text-xs sm:text-sm text-cream-ivory mt-0.5">
+                We have arranged <strong className="text-gold-light font-bold">24 air-conditioned rooms</strong> for out-of-town guests.
+              </p>
+            </div>
+            <a
+              href="#accommodation"
+              className="px-4 py-2 rounded-full bg-[#42101F] border border-gold-antique text-gold-champagne font-heading font-semibold text-xs uppercase tracking-wider hover:bg-[#641B2E] transition-all whitespace-nowrap"
+            >
+              View Accommodation Details & Contact →
+            </a>
+          </div>
         </div>
       </div>
     </section>
