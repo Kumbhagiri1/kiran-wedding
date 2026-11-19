@@ -81,7 +81,8 @@ async function testWebsite() {
     "24 air-conditioned rooms",
     "Kindly contact the family in advance for room reservations.",
     "We look forward to welcoming you!",
-    "GANGALLA MAHESWARI"
+    "GANGALLA MAHESWARI",
+    "Kalyanam Vaibhogam"
   ];
 
   if (pageContent.includes("MAHESHWARI") || pageContent.includes("Maheshwari")) {

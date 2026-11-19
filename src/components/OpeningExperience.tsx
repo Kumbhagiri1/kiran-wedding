@@ -70,6 +70,9 @@ export function OpeningExperience({ onOpenComplete }: OpeningExperienceProps) {
   };
 
   const handleOpen = () => {
+    try {
+      window.dispatchEvent(new CustomEvent("start-wedding-music"));
+    } catch {}
     completeDismissal();
   };
 
