@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-cormorant: 'Cormorant Garamond', Georgia, serif;
+  --font-playfair: 'Playfair Display', Georgia, serif;
+  --font-lora: 'Lora', Georgia, serif;
+  --font-cinzel: 'Cinzel', serif;
+
+  --color-maroon: #641B2E;
+  --color-burgundy: #42101F;
+  --color-gold-antique: #C6A15B;
+  --color-gold-champagne: #E8D6AD;
+  --color-ivory: #FFF9EF;
+  --color-cream-warm: #F5EBDD;
+  --color-dark-text: #30231F;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: light dark;
+}
+
+body {
+  background-color: #2A0B14;
+  color: #30231F;
+  font-family: var(--font-lora);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Custom Antique Gold & Maroon Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2A0B14;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C6A15B;
+  border-radius: 5px;
+  border: 2px solid #42101F;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #E8D6AD;
+}
+
+/* Subtle selection styling */
+::selection {
+  background-color: #C6A15B;
+  color: #42101F;
+}
+
+/* Print Styles for Printable Invitation PDF */
+@media print {
+  body {
+    background-color: white !important;
+    color: #30231F !important;
+  }
+
+  header,
+  footer,
+  button,
+  .print\\:hidden,
+  #invocations,
+  #couple,
+  #muhurtham,
+  #venue,
+  #family,
+  #rsvp {
+    display: none !important;
+  }
+}
