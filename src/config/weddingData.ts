@@ -390,11 +390,14 @@ export const WEDDING_DATA: WeddingData = {
   elders: {
     title: "WITH THE BLESSINGS OF OUR ELDERS",
     list: [
-      "Sri Kumbhagiri Subbarayudu",
       "Sri Kumbhagiri Venkateshwarlu",
       "Sri Kumbhagiri Krishna",
       "Sri Devara Subbarayudu",
       "Sri Devara Chandra Shekar",
+      "Sri Devara Jaganadha Rao",
+      "Sri Devara Vishnu Vardhan Rao",
+      "Sri Devara Kalyan",
+      "Sri Devara Vijay Rama Rao",
       "Sri Kathi Yerkulaiah",
       "Sri Kadapa Babu",
     ],

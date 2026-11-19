@@ -91,11 +91,19 @@ async function testWebsite() {
     "Chi. Sou. Kadapa Parvathi",
     "Sri Hari",
     "Sri Harsha",
-    "Sri Uday"
+    "Sri Uday",
+    "Sri Devara Jaganadha Rao",
+    "Sri Devara Vishnu Vardhan Rao",
+    "Sri Devara Kalyan",
+    "Sri Devara Vijay Rama Rao"
   ];
 
   if (pageContent.includes("MAHESHWARI") || pageContent.includes("Maheshwari")) {
     throw new Error("Found old spelling Maheshwari in page content!");
+  }
+
+  if (pageContent.includes("Kumbhagiri Subbarayudu") || pageContent.includes("Kumbhagiri Subba Rayudu")) {
+    throw new Error("Found removed name Kumbhagiri Subbarayudu in page content!");
   }
 
   for (const c of checks) {

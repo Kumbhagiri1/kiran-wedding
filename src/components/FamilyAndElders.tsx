@@ -6,9 +6,10 @@ import { Users, HeartHandshake, Sparkles, Heart } from "lucide-react";
 export function FamilyAndElders() {
   const { elders, brothers, sisters, cousins, compliments } = WEDDING_DATA;
 
-  // Symmetrical distribution of elders
-  const paternalElders = elders.list.slice(0, 3);
-  const respectedElders = elders.list.slice(3);
+  // Symmetrical distribution of elders (5 and 5)
+  const half = Math.ceil(elders.list.length / 2);
+  const firstBranch = elders.list.slice(0, half);
+  const secondBranch = elders.list.slice(half);
 
   return (
     <section id="family" className="relative py-16 sm:py-24 px-4 bg-cream-ivory text-darkText overflow-hidden">
@@ -45,10 +46,10 @@ export function FamilyAndElders() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 max-w-2xl mx-auto">
               <div className="p-5 rounded-2xl bg-cream-warm/80 border border-gold-antique/40 shadow-sm text-center">
                 <span className="text-[11px] font-ceremonial text-gold-dark font-bold uppercase tracking-widest block mb-3">
-                  Paternal Elders
+                  Respected Family Elders
                 </span>
                 <div className="space-y-2.5">
-                  {paternalElders.map((name, i) => (
+                  {firstBranch.map((name, i) => (
                     <p key={i} className="font-heading font-bold text-base sm:text-lg text-maroon tracking-wide">
                       {name}
                     </p>
@@ -61,7 +62,7 @@ export function FamilyAndElders() {
                   Maternal & Respected Elders
                 </span>
                 <div className="space-y-2.5">
-                  {respectedElders.map((name, i) => (
+                  {secondBranch.map((name, i) => (
                     <p key={i} className="font-heading font-bold text-base sm:text-lg text-maroon tracking-wide">
                       {name}
                     </p>
