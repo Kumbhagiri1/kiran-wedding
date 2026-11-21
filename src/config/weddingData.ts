@@ -409,14 +409,14 @@ export const WEDDING_DATA: WeddingData = {
     list: [
       "Sri Arun Kumar",
       "Sri Lakshman",
-      "Sri Raju (Agafee)",
+      "Sri Raju (Agape)",
     ],
   },
 
   sisters: {
     title: "SISTERS",
     list: [
-      "Chi. Sou. Jareesha",
+      "Chi. Sou. Jerusha",
       "Chi. Sou. Kadapa Parvathi",
     ],
   },
