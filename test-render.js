@@ -43,6 +43,39 @@ async function testWebsite() {
     console.log('Captured 05-couple-profiles-with-photo.png');
   }
 
+  // 4b. Capture dedicated section screenshot of Photo Gallery (#gallery)
+  const galleryEl = await page.$('#gallery');
+  if (galleryEl) {
+    await galleryEl.screenshot({ path: path.join(outDir, '10-gallery-grid.png') });
+    console.log('Captured 10-gallery-grid.png');
+
+    // Test clicking a photo to open royal fullscreen lightbox
+    const firstPhotoCard = await page.$('#gallery .cursor-pointer');
+    if (firstPhotoCard) {
+      await firstPhotoCard.click();
+      console.log('Clicked photo card to open lightbox.');
+      await new Promise(r => setTimeout(r, 600));
+      await page.screenshot({ path: path.join(outDir, '11-gallery-lightbox.png') });
+      console.log('Captured 11-gallery-lightbox.png');
+
+      // Click next button
+      const nextBtn = await page.$('button[aria-label="Next Photo"]');
+      if (nextBtn) {
+        await nextBtn.click();
+        console.log('Clicked Next photo button.');
+        await new Promise(r => setTimeout(r, 400));
+      }
+
+      // Close lightbox
+      const closeBtn = await page.$('button[aria-label="Close Gallery Modal"]');
+      if (closeBtn) {
+        await closeBtn.click();
+        console.log('Clicked Close Gallery Modal button.');
+        await new Promise(r => setTimeout(r, 400));
+      }
+    }
+  }
+
   // 5. Capture dedicated section screenshot of Two-Day Itinerary (#itinerary)
   const itineraryEl = await page.$('#itinerary');
   if (itineraryEl) {
@@ -131,7 +164,13 @@ async function testWebsite() {
     "మర్ఫా",
     "Dhol Bass (Dhum)",
     "High Slap (Takk)",
-    "Tutari Fanfare"
+    "Tutari Fanfare",
+    "Pre-Wedding Photo Gallery",
+    "CHERISHED MOMENTS",
+    "Divine Harmony",
+    "దివ్య బంధం",
+    "Playful Whispers",
+    "The Royal Groom"
   ];
 
   const subbaIdx = pageContent.indexOf("Sri Devara Subbarayudu");

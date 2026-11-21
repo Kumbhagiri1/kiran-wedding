@@ -7,6 +7,7 @@ import { WeddingHero } from "@/components/WeddingHero";
 import { DevotionalInvocation } from "@/components/DevotionalInvocation";
 import { TheInvitation } from "@/components/TheInvitation";
 import { CoupleProfiles } from "@/components/CoupleProfiles";
+import { PhotoGallery } from "@/components/PhotoGallery";
 import { TwoDaySchedule } from "@/components/TwoDaySchedule";
 import { WeddingMuhurtham } from "@/components/WeddingMuhurtham";
 import { WeddingVenue } from "@/components/WeddingVenue";
@@ -41,6 +42,9 @@ export default function WeddingPage() {
 
       {/* SECTION 4: Meet the Bride & Groom */}
       <CoupleProfiles />
+
+      {/* DEDICATED PRE-WEDDING PHOTO ALBUM / GALLERY */}
+      <PhotoGallery />
 
       {/* DEDICATED TWO-DAY WEDDING CELEBRATION SCHEDULE (Haldi & Music + Wedding) */}
       <TwoDaySchedule />

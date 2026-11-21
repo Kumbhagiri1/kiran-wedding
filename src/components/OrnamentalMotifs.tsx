@@ -132,7 +132,13 @@ export function GoldDivider({ className = "my-8", symbol = "lotus" }: { classNam
   );
 }
 
-export function CornerFlourish({ position = "tl" }: { position: "tl" | "tr" | "bl" | "br" }) {
+export function CornerFlourish({
+  position = "tl",
+  className = "",
+}: {
+  position: "tl" | "tr" | "bl" | "br";
+  className?: string;
+}) {
   const rotationClass = {
     tl: "",
     tr: "rotate-90",
@@ -142,7 +148,7 @@ export function CornerFlourish({ position = "tl" }: { position: "tl" | "tr" | "b
 
   return (
     <svg
-      className={`w-8 h-8 sm:w-12 sm:h-12 text-gold-antique opacity-70 pointer-events-none transform ${rotationClass}`}
+      className={`w-8 h-8 sm:w-12 sm:h-12 text-gold-antique opacity-70 pointer-events-none transform ${rotationClass} ${className}`}
       viewBox="0 0 60 60"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

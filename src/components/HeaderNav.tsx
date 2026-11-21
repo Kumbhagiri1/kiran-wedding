@@ -26,6 +26,7 @@ export function HeaderNav() {
     { label: "Invocations", href: "#invocations" },
     { label: "Invitation", href: "#invitation" },
     { label: "Bride & Groom", href: "#couple" },
+    { label: "Gallery", href: "#gallery" },
     { label: "2-Day Schedule", href: "#itinerary" },
     { label: "Muhurtham", href: "#muhurtham" },
     { label: "Venue", href: "#venue" },
