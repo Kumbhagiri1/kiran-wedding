@@ -170,7 +170,9 @@ async function testWebsite() {
     "Divine Harmony",
     "దివ్య బంధం",
     "Playful Whispers",
-    "The Royal Groom"
+    "The Royal Groom",
+    "The Radiant Bride",
+    "సౌభాగ్యవతి పెళ్లికూతురు"
   ];
 
   const subbaIdx = pageContent.indexOf("Sri Devara Subbarayudu");

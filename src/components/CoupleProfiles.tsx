@@ -150,7 +150,7 @@ export function CoupleProfiles() {
                     <img
                       src={bride.image}
                       alt={bride.name}
-                      className="w-full h-full object-cover rounded-t-full group-hover:scale-105 transition-transform duration-500 filter contrast-105"
+                      className="w-full h-full object-cover object-[center_20%] rounded-t-full group-hover:scale-105 transition-transform duration-500 filter contrast-105"
                     />
                     <div className="absolute bottom-2 left-0 right-0 z-20 text-center">
                       <span className="px-3 py-0.5 rounded-full bg-[#42101F]/90 border border-gold-antique/70 font-ceremonial text-[10px] text-gold-champagne tracking-wider uppercase">

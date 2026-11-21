@@ -21,7 +21,7 @@ export interface GalleryPhoto {
   titleTe: string;
   subtitle: string;
   aspect: "portrait" | "landscape";
-  category: "together" | "groom" | "scenic";
+  category: "together" | "groom" | "bride" | "scenic";
 }
 
 export const GALLERY_PHOTOS: GalleryPhoto[] = [
@@ -134,6 +134,16 @@ export const GALLERY_PHOTOS: GalleryPhoto[] = [
     subtitle: "Together on the wide open road against majestic hills, ready for life's grand journey.",
     aspect: "landscape",
     category: "scenic",
+  },
+  {
+    id: "photo-12",
+    src: "/images/gallery/photo-12.webp",
+    srcJpg: "/images/gallery/photo-12.jpg",
+    titleEn: "The Radiant Bride",
+    titleTe: "సౌభాగ్యవతి పెళ్లికూతురు",
+    subtitle: "Ch. Sou. Gangalla Maheswari in serene grace, adorned in traditional ethnic beauty.",
+    aspect: "portrait",
+    category: "bride",
   },
 ];
 
@@ -272,7 +282,7 @@ export function PhotoGallery() {
                   : "bg-[#641B2E]/60 text-cream-warm border border-gold-antique/40 hover:bg-[#641B2E] hover:text-gold-champagne"
               }`}
             >
-              Royal Portraits (3)
+              Royal Portraits ({GALLERY_PHOTOS.filter(p => p.aspect === "portrait").length})
             </button>
           </div>
         </div>
